@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Comentario: ctrl + / -->
+<!-- Elementos define la estructura de la web, definidas con etiquetas -->
+<html lang="es"> <!-- Elemento raiz -->
+	<!-- Cambiar niveles de identacion: ctrl + [  ctrl + ] -->
+	<head>
+		<title>Página de prueba</title>
+	</head>
+
+	<body>
+		<h1>Hola Mundo!</h1>
+		<main>
+			<!-- Acomodar texto: alt + z -->
+			<!-- https://developer.mozilla.org/es/ -->
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam soluta aperiam, voluptatem fuga eveniet dignissimos itaque, at dolorum eligendi blanditiis illo magnam ea mollitia. Cumque, rerum aliquam. Quas, atque pariatur.</p>
+
+			<h2>Indice:</h2>
+			<!-- Lista viñetas -->
+			<!-- <ul>
+				<li><a href="#Img">Imágenes</a></li>
+				<li><a href="#Rep">Repositorio</a></li> 
+				<li><a href="#Cont">Contenido</a></li>
+			</ul> -->
+			<!-- Lista ordenada -->
+			<ol>
+				<li><a href="#Img">Imágenes</a></li>
+				<li><a href="#Rep">Repositorio</a></li>
+				<li><a href="#Cont">Contenido</a></li>
+			</ol>
+
+			<hr>
+			<div>
+				<h3 id="Img">Imágenes:</h3>
+				<a href="https://www.ucr.ac.cr/" target="_blank" rel="noopener noreferred"><img src="img/ucr-logo.png" alt="Logo UCR" width="300"></a>
+
+				<h3 id="Rep"><a href="https://github.com/StephMontanaro/Tarea1-HTML_CSS" target="_blank" rel="noopener noreferred"> Repositorio publico</a></h3>
+			</div>
+
+			<hr>
+			<div>
+				<!-- Tipos de letra
+				Negrita: <strong></strong>
+				Italica: <em></em>
+				Tachado: <s></s>
+				Letra pequeña: <small></small> -->
+				<h3 id="Cont">Contenido:</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis repellendus eligendi nostrum provident non, assumenda quis iste voluptas eveniet minima pariatur eaque nisi magnam ratione unde, <strong>perferendis odio a aliquam atque beatae sint ipsam! Officiis voluptatem commodi tempora, et consectetur velit magni dolor!</strong> Earum, consequatur dolorem cum minus reiciendis quia dolores perspiciatis esse pariatur corporis. Officiis doloribus beatae nihil molestiae, quis odit a inventore unde, illum rem itaque dolores dolore dignissimos nisi magni sint? Iusto mollitia, deleniti error repudiandae alias dolores.</p>
+
+				<p><em>Sed obcaecati exercitationem quis ducimus dolore, sit recusandae sint, doloribus commodi, quos veritatis? Voluptate maiores temporibus dolor totam quo illo, veritatis numquam atque doloremque quam itaque, unde mollitia praesentium sit modi repudiandae minima quia aliquam dicta harum?</em> Quos velit corporis tempore nam qui aliquid omnis, rerum a iste accusamus sunt molestias minus perspiciatis minima eveniet dolorum provident nemo ex explicabo.</p>
+
+				<p><strong>Maiores quisquam nam possimus, corporis, voluptatum sapiente accusantium error vitae perferendis consectetur eos atque numquam perspiciatis ut sint officia illo magni iste culpa quo praesentium repellendus laboriosam!</strong> <em>Dolorum nisi quibusdam recusandae ab enim beatae accusantium assumenda, velit maiores exercitationem vitae repudiandae quas non?</em> <s>Temporibus, voluptatibus sint nobis doloremque quisquam saepe odio maxime minima pariatur fugit excepturi quia sit rerum quo illum quasi neque qui, molestiae adipisci dignissimos doloribus fugiat accusantium obcaecati!</s> <em>At, sequi doloremque amet consequatur iusto hic, nam dignissimos optio tempora placeat nemo?</em> Laborum laboriosam, reiciendis nam omnis delectus cumque harum ipsa quas itaque, dolorem ducimus culpa aperiam odit alias possimus recusandae quo eum quis, nihil eos.</p>
+			</div>
+
+			<hr>
+			<div>
+				<h3>Contacto:</h3>
+				<form action="/enviar-respuesta">
+					<!-- Correo electrónico -->
+					<label for="correo">
+						<input id="correo" type="radio" value="correo" name="correo-num" checked> Correo electronico:
+					</label><br>
+					<input type="text" placeholder="Correo electrónico" required>
+					<button type="submit">Enviar</button>
+
+					<!-- Salto de linea <br> -->
+					<br>
+
+					<!-- Número telefónico -->
+					<label for="num">
+						<input id="num" type="radio" value="num" name="correo-num"> Número telefónico:
+					</label><br>
+					<input type="text" placeholder="Número telefónico" required>
+					<button type="submit">Enviar</button>
+					
+					<br>
+					
+					<!-- Checkbox -->
+					<label for="cond">
+						<input id="cond" type="checkbox" value="cond" checked> Aceptar <a href="#">Condiciones de Uso</a>
+					</label><br>
+					<label for="sus">
+						<input id="sus" type="checkbox" value="sus" checked> Suscribir
+					</label>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p><small>Pagina de prueba - 16/08/2026</small></p>
+		</footer>
+	</body>
+
+</html>
