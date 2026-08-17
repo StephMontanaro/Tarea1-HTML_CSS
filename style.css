@@ -3,15 +3,27 @@
   src: url(font/Brianne_s_hand.ttf) format("truetype")
 }
 
-body {
-  background-color: #06231d;
+* {
+    box-sizing: border-box;
 }
 
+body {
+  margin: 15px;
+  background-color: #06231d;
+  color: aliceblue;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+ 
 #loading-screen {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
 }
 
 h1 {
@@ -19,4 +31,108 @@ h1 {
   color: #cef17b;
   font-size: 5vw;
   text-align: center;
+}
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+main div {
+  color: #06231d;
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 15px;
+  background-color: #f4f1d5;
+}
+
+#contacto {
+  color: #06231d;
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 15px;
+  background-color: #CDEDB3;
+}
+
+h2 {
+  font-size: 26px;
+  font-family: "Brianne's Hand";
+  color: #084734;
+  text-align: center;
+}
+
+h3, h4 {
+  font-size: 24px;
+  font-family: "Brianne's Hand";
+  color: #76c337;
+}
+
+p,
+li {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+strong {
+  font-family: "Brianne's Hand";
+  color: #397a2f;
+  font-size: 20px;
+}
+
+main img {
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 12px;
+}
+
+#almanaque img {
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 12px;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #236b32;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #b87917;
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid #8fbd4a;
+  margin: 40px 0;
+}
+
+input[type=text] {
+  margin-left: 70px;
+  margin-bottom: 15px;
+}
+
+
+footer {
+  background-color: #052d21;
+  color: #cef17b;
+  text-align: center;
+  padding: 25px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 15px;
 }
