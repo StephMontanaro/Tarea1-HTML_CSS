@@ -1,60 +1,96 @@
 <!DOCTYPE html>
-<!-- Comentario: ctrl + / -->
-<!-- Elementos define la estructura de la web, definidas con etiquetas -->
-<html lang="es"> <!-- Elemento raiz -->
-	<!-- Cambiar niveles de identacion: ctrl + [  ctrl + ] -->
-	<head>
-		<title>Página de prueba</title>
-		<link rel="stylesheet" href="style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Space+Grotesk&display=swap" rel="stylesheet">
-	</head>
-
+<html lang="es">
 	<body>
-		<h1>Hola Mundo!</h1>
+		<head>
+			<link rel="stylesheet" href="style.css">
+			<title>Plants vs. Zombies</title>
+      <img id="loading-screen" src="img/loading-screen.webp" alt="Plants vs. Zombies">
+			<h1>Plants vs. Zombies</h1>
+		</head>
+
 		<main>
-			<!-- Acomodar texto: alt + z -->
-			<!-- https://developer.mozilla.org/es/ -->
-			<p class="info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam soluta aperiam, voluptatem fuga eveniet dignissimos itaque, at dolorum eligendi blanditiis illo magnam ea mollitia. Cumque, rerum aliquam. Quas, atque pariatur.</p>
 
-			<h2>Índice:</h2>
-			<!-- Lista viñetas -->
-			<!-- <ul>
-				<li><a href="#Img">Imágenes</a></li>
-				<li><a href="#Rep">Repositorio</a></li> 
-				<li><a href="#Cont">Contenido</a></li>
-			</ul> -->
-			<!-- Lista ordenada -->
-			<ol>
-				<li><a class= lista href="#Img">Imágenes</a></li>
-				<li><a class= lista href="#Rep">Repositorio</a></li>
-				<li><a class= lista href="#Cont">Contenido</a></li>
-			</ol>
-
+			<!-- DESCRIPCION GENERAL -->
 			<hr>
 			<div>
-				<h3 id="Img">Imágenes:</h3>
-				<a href="https://www.ucr.ac.cr/" target="_blank" rel="noopener noreferred"><img src="img/ucr-logo.png" alt="Logo UCR" width="300"></a>
+        <h2>¿QUÉ ES PLANTS VS. ZOMBIES?</h2>
 
-				<h3 id="Rep"><a href="https://github.com/StephMontanaro/Tarea1-HTML_CSS" target="_blank" rel="noopener noreferred"> Repositorio público</a></h3>
+        <!-- https://www.ea.com/es-es/games/plants-vs-zombies -->
+
+        <p>Plantas contra Zombies es uno de los video juegos más conocidos del genero de defensa de torres (tower defense) desarrollado original por PopCap Games el 5 de mayo del 2009 y actualmente pertenece a Electronic Arts. </p>
+
+        <p>En el juego, una horda de Zombies intenta llegar a la casa del jugador, y la manera de detenerlo es utilizando plantas. Cada tipo de planta y de zombie tienen habilidades diferentes, por lo que el jugador debera de adaptar su estrategia en cada nivel.</p>
 			</div>
 
+      <!-- ESTRUCTRA DEL JUEGO -->
+      <hr>
+			<div>
+        <h2>¿CÓMO SE JUEGA? </h2>
+        <p>El objetivo principal es impedir que los zombies atraviesen el jardin y deborren el cerebro del jugador. Para defenderse, se colocan estrategicamente plantas en las distintas lineas del jardin.</p>
+
+        <img src="img/PvsZ-jardin.png" alt="PvZ1 GamePlay">
+
+        <p>Para colocar las plantas se necesitan <strong>soles</strong>. Cada planta necesita de una cantidad distinta de soles, estos pueden generarse naturalmente en los niveles de día o generarse artificialmente utilizando plantas como el Girasol o la Seta Solar. Al inicio de cada día el jugador cuenta con 50 soles para empezar a plantar y al finalizar, el jugador, recibe un nuevo tipo de planta.</p>
+
+        <p>En el modo principal del juego, llamado <strong>Modo Aventura divido en distintos tipos de niveles con una duración de 10 días cada uno. </strong> </p> 
+			</div>
+
+			<!-- PLANTAS VS. ZOMBIES   -->
 			<hr>
 			<div>
-				<!-- Tipos de letra
-				Negrita: <strong></strong>
-				Italica: <em></em>
-				Tachado: <s></s>
-				Letra pequeña: <small></small> -->
-				<h3 id="Cont">Contenido:</h3>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis repellendus eligendi nostrum provident non, assumenda quis iste voluptas eveniet minima pariatur eaque nisi magnam ratione unde, <strong>perferendis odio a aliquam atque beatae sint ipsam! Officiis voluptatem commodi tempora, et consectetur velit magni dolor!</strong> Earum, consequatur dolorem cum minus reiciendis quia dolores perspiciatis esse pariatur corporis. Officiis doloribus beatae nihil molestiae, quis odit a inventore unde, illum rem itaque dolores dolore dignissimos nisi magni sint? Iusto mollitia, deleniti error repudiandae alias dolores.</p>
+        <h2>PLANTAS VS. ZOMBIES</h2>
 
-				<p><em>Sed obcaecati exercitationem quis ducimus dolore, sit recusandae sint, doloribus commodi, quos veritatis? Voluptate maiores temporibus dolor totam quo illo, veritatis numquam atque doloremque quam itaque, unde mollitia praesentium sit modi repudiandae minima quia aliquam dicta harum?</em> Quos velit corporis tempore nam qui aliquid omnis, rerum a iste accusamus sunt molestias minus perspiciatis minima eveniet dolorum provident nemo ex explicabo.</p>
+        <p>
+            El jardín está dividido entre dos bandos. Por un lado están las plantas, que defienden la casa utilizando diferentes habilidades. Por otro lado están los zombies, que avanzan por el jardín intentando llegar hasta ella.
+        </p>
 
-				<p><strong>Maiores quisquam nam possimus, corporis, voluptatum sapiente accusantium error vitae perferendis consectetur eos atque numquam perspiciatis ut sint officia illo magni iste culpa quo praesentium repellendus laboriosam!</strong> <em>Dolorum nisi quibusdam recusandae ab enim beatae accusantium assumenda, velit maiores exercitationem vitae repudiandae quas non?</em> <s>Temporibus, voluptatibus sint nobis doloremque quisquam saepe odio maxime minima pariatur fugit excepturi quia sit rerum quo illum quasi neque qui, molestiae adipisci dignissimos doloribus fugiat accusantium obcaecati!</s> <em>At, sequi doloremque amet consequatur iusto hic, nam dignissimos optio tempora placeat nemo?</em> Laborum laboriosam, reiciendis nam omnis delectus cumque harum ipsa quas itaque, dolorem ducimus culpa aperiam odit alias possimus recusandae quo eum quis, nihil eos.</p>
+        <h3>Las plantas</h3>
+
+        <p>
+            Cada planta tiene una función específica. Algunas producen soles,
+            algunas atacan a los zombis y otras funcionan como defensa.
+        </p>
+
+        <h4>Día:</h4>
+        <ul>
+            <li><strong>Girasol:</strong> produce soles para poder plantar otras especies.</li>
+            <li><strong>Lanzaguisantes:</strong> dispara guisantes contra los zombis.</li>
+            <li><strong>Nuez:</strong> sirve como barrera para detener a los enemigos.</li>
+            <li><strong>Hielaguisantes:</strong> ataca y ralentiza a los zombis.</li>
+            <li><strong>Patatapum:</strong> explota cuando un zombi se acerca.</li>
+        </ul>
+
+        <h3>Los zombies</h3>
+
+        <p>
+            Los zombies también poseen diferentes características. El zombi normal
+            es relativamente débil, mientras que otros llevan objetos que los
+            protegen o poseen habilidades especiales que dificultan la defensa.
+        </p>
+
+        <ul>
+          <li><strong>Zombi:</strong> el enemigo básico y más común del juego.</li>
+          <li><strong>Zombi Caracono:</strong> lleva un cono de tráfico que le proporciona protección adicional.</li>
+          <li><strong>Zombie Caracubo:</strong> utiliza una cubeta como casco, por lo que puede resistir muchos más ataques.</li>
+          <li><strong>Zombi Lector::</strong> avanza protegido por un periódico hasta que este es destruido.</li>
+          <li><strong>Zombi saltador de pértiga:</strong> puede saltar la primera planta que encuentra utilizando una pértiga.</li>
+        </ul>
+
 			</div>
 
+      <hr>
+
+      <!-- MAS INFORMACIÓN -->
+      <div>
+          <h2>MÁS INFORMACIÓN</h2>
+
+          <p>
+              Para conocer más sobre la saga de Plants vs. Zombies, puedes visitar la
+              <a href="https://www.ea.com/games/plants-vs-zombies" target="_blank" rel="noopener noreferrer"> página oficial de Plants vs. Zombies</a>.
+          </p>
+      </div>
+
+			<!-- CONTACTO -->
 			<hr>
 			<div>
 				<h3>Contacto:</h3>
@@ -66,7 +102,6 @@
 					<input type="text" placeholder="Correo electrónico" required>
 					<button type="submit">Enviar</button>
 
-					<!-- Salto de linea <br> -->
 					<br>
 
 					<!-- Número telefónico -->
@@ -88,9 +123,9 @@
 				</form>
 			</div>
 		</main>
+
 		<footer>
-			<p class="info"><small>Página de prueba - 16/08/2026</small></p>
+			<p class="info"><small>Stephannie Montanaro Rojas - 16/08/2026</small></p>
 		</footer>
 	</body>
-
 </html>
