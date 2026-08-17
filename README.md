@@ -6,3 +6,5 @@ Tarea 1 del curso de Ingeniería de software
 
 ### Otras referencias:
 [**MDW Web Docs**](https://developer.mozilla.org/es/)
+
+[**Google Fonts**](https://fonts.google.com/)
