@@ -29,3 +29,65 @@ cerrarModal.addEventListener("click", function() {
 cerrarModalAbajo.addEventListener("click", function() {
     modal.style.display = "none";
 });
+
+const imagenMapa = document.getElementById("imagen-mapa");
+const nombreMapa = document.getElementById("nombre-mapa");
+const botonAnterior = document.getElementById("anterior");
+const botonSiguiente = document.getElementById("siguiente");
+
+const mapas = [
+    {
+        imagen: "img/day.webp",
+        nombre: "Día"
+    },
+    {
+        imagen: "img/night.webp",
+        nombre: "Noche"
+    },
+    {
+        imagen: "img/pool.webp",
+        nombre: "Piscina"
+    },
+    {
+        imagen: "img/fog.webp",
+        nombre: "Niebla"
+    },
+    {
+        imagen: "img/roof.webp",
+        nombre: "Tejado"
+    }
+];
+
+let mapaActual = 0;
+
+botonAnterior.addEventListener("click", function() {
+
+    mapaActual--;
+
+    if (mapaActual < 0) {
+        mapaActual = mapas.length - 1;
+    }
+
+    mostrarMapa();
+
+});
+
+botonSiguiente.addEventListener("click", function() {
+
+    mapaActual++;
+
+    if (mapaActual >= mapas.length) {
+        mapaActual = 0;
+    }
+
+    mostrarMapa();
+
+});
+
+function mostrarMapa() {
+
+    imagenMapa.src = mapas[mapaActual].imagen;
+    imagenMapa.alt = "Mapa de " + mapas[mapaActual].nombre;
+    nombreMapa.textContent = mapas[mapaActual].nombre;
+
+}
