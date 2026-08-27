@@ -141,7 +141,7 @@ footer p {
   display: none;
 }
 
-#boton-info {
+.boton {
     background-color: #6b9e3f;
     color: white;
     border: 3px solid #355c24;
@@ -152,10 +152,46 @@ footer p {
     cursor: pointer;
 }
 
-#boton-info:hover {
+.boton:hover {
     background-color: #8bbf4d;
 }
 
-#boton-info:active {
+.boton:active {
     transform: scale(0.95);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-contenido {
+    background-color: #f5f0d8;
+    width: 60%;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 30px;
+    border: 5px solid #355c24;
+    border-radius: 15px;
+    position: relative;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #6b9e3f;
 }

@@ -12,3 +12,20 @@ botonInfo.addEventListener("click", function() {
   }
 
 });
+
+const botonModal = document.getElementById("boton-modal");
+const modal = document.getElementById("modal");
+const cerrarModal = document.getElementById("cerrar-modal");
+const cerrarModalAbajo = document.getElementById("cerrar-modal-abajo");
+
+botonModal.addEventListener("click", function() {
+    modal.style.display = "block";
+});
+
+cerrarModal.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+cerrarModalAbajo.addEventListener("click", function() {
+    modal.style.display = "none";
+});
