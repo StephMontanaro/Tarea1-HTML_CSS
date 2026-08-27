@@ -91,3 +91,21 @@ function mostrarMapa() {
     nombreMapa.textContent = mapas[mapaActual].nombre;
 
 }
+
+const acordeones = document.querySelectorAll(".acordeon");
+
+acordeones.forEach(function(acordeon) {
+
+    acordeon.addEventListener("click", function() {
+
+        const contenido = this.nextElementSibling;
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+        } else {
+            contenido.style.display = "block";
+        }
+
+    });
+
+});

@@ -219,3 +219,49 @@ footer p {
     font-weight: bold;
     margin-top: 10px;
 }
+
+/* SECCIÓN PLANTAS VS. ZOMBIES */
+
+#plantas-zombies {
+    padding: 25px;
+}
+
+/* Botones del acordeón */
+.acordeon {
+    width: 100%;
+    padding: 18px 20px;
+    margin-top: 15px;
+
+    background-color: #174d3b;
+    color: aliceblue;
+
+    border: 2px solid #3d8b67;
+    border-radius: 10px;
+
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Cuando se pasa el mouse */
+.acordeon:hover {
+    background-color: #23694f;
+}
+
+/* Contenido desplegable */
+.acordeon-contenido {
+    display: none;
+
+    padding: 20px;
+    margin-bottom: 10px;
+
+    background-color: #6d9f94;
+
+    border-left: 3px solid #3d8b67;
+    border-right: 3px solid #3d8b67;
+    border-bottom: 3px solid #3d8b67;
+
+    border-radius: 0 0 10px 10px;
+}
