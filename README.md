@@ -8,3 +8,5 @@ Tarea 1 del curso de Ingeniería de software
 [**MDW Web Docs**](https://developer.mozilla.org/es/)
 
 [**Google Fonts**](https://fonts.google.com/)
+
+[**Reproductor de música web**](https://obedalvarado.pw/blog/crea-un-reproductor-de-musica-con-javascript-html5-y-css/)

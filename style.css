@@ -265,3 +265,55 @@ footer p {
 
     border-radius: 0 0 10px 10px;
 }
+
+#reproductor {
+  text-align: center;
+}
+
+#controles-reproductor {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #eef7ea;
+  border: 1px solid #7bb661;
+}
+
+#barra-progreso {
+  width: 90%;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#botones-reproductor {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#control-volumen {
+  margin-top: 10px;
+}
+
+#lista-canciones {
+  text-align: left;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px 30px;
+  margin-top: 15px;
+}
+
+#lista-canciones li {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+#lista-canciones li:hover {
+  color: #7bb661;
+}
+
+#lista-canciones li.activa {
+  font-weight: bold;
+  color: #d35400;
+}

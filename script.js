@@ -1,3 +1,5 @@
+console.log("JavaScript funcionando");
+
 const botonInfo = document.getElementById("boton-info");
 const infoAdicional = document.getElementById("extra-info");
 
@@ -109,3 +111,147 @@ acordeones.forEach(function(acordeon) {
     });
 
 });
+
+
+const canciones = [
+    { archivo: "Laura Shigihara - Crazy Dave's Greeting.mp3", nombre: "Crazy Dave's Greeting" },
+    { archivo: "Laura Shigihara - Crazy Dave (Intro Theme).mp3", nombre: "Crazy Dave (Intro Theme)" },
+    { archivo: "Laura Shigihara - Choose Your Seeds.mp3", nombre: "Choose Your Seeds" },
+    { archivo: "Laura Shigihara - Zen Garden.mp3", nombre: "Zen Garden" },
+    { archivo: "Laura Shigihara - Grasswalk.mp3", nombre: "Grasswalk" },,
+    { archivo: "Laura Shigihara - Loonboon.mp3", nombre: "Loonboon" },
+    { archivo: "Laura Shigihara - Moongrains.mp3", nombre: "Moongrains" },
+    { archivo: "Laura Shigihara - Graze the Roof.mp3", nombre: "Graze the Roof" },
+    { archivo: "Laura Shigihara - Rigor Mormist.mp3", nombre: "Rigor Mormist" },
+    { archivo: "Laura Shigihara - Watery Graves - Slow Version.mp3", nombre: "Watery Graves (Slow Version)" },
+    { archivo: "Laura Shigihara - Watery Graves - Fast Version.mp3", nombre: "Watery Graves (Fast Version)" },
+    { archivo: "Laura Shigihara - Brainiac Maniac.mp3", nombre: "Brainiac Maniac" },
+    { archivo: "Laura Shigihara - Ultimate Battle.mp3", nombre: "Ultimate Battle" },
+    { archivo: "Laura Shigihara - Cerebrawl.mp3", nombre: "Cerebrawl" },
+    { archivo: "Laura Shigihara - Zombotany (Bonus Track).mp3", nombre: "Zombotany (Bonus Track)" },
+    { archivo: "Laura Shigihara - Uraniwa Ni Zombies Ga!.mp3", nombre: "Uraniwa Ni Zombies Ga!" },
+    { archivo: "Laura Shigihara - Zombies on Your Lawn.mp3", nombre: "Zombies on Your Lawn" }
+];
+
+const audio = document.getElementById("reproductor-audio");
+const botonPlayPause = document.getElementById("play-pause");
+const botonAnteriorCancion = document.getElementById("anterior-cancion");
+const botonSiguienteCancion = document.getElementById("siguiente-cancion");
+const barraProgreso = document.getElementById("barra-progreso");
+const tiempoTexto = document.getElementById("tiempo");
+const cancionActualTexto = document.getElementById("cancion-actual");
+const controlVolumen = document.getElementById("volumen");
+const listaCancionesEl = document.getElementById("lista-canciones");
+
+let cancionActual = 0;
+
+function crearListaCanciones() {
+    canciones.forEach(function(cancion, indice) {
+        const item = document.createElement("li");
+        item.textContent = cancion.nombre;
+        item.dataset.indice = indice;
+
+        item.addEventListener("click", function() {
+            cancionActual = indice;
+            cargarCancion(cancionActual);
+            audio.play();
+            actualizarIconoPlay();
+        });
+
+        listaCancionesEl.appendChild(item);
+    });
+}
+
+function cargarCancion(indice) {
+
+    audio.src = "soundtrack/" + encodeURIComponent(canciones[indice].archivo);
+    cancionActualTexto.textContent = "Reproduciendo: " + canciones[indice].nombre;
+
+    document.querySelectorAll("#lista-canciones li").forEach(function(li) {
+        li.classList.remove("activa");
+    });
+
+    const itemActivo = document.querySelector('#lista-canciones li[data-indice="' + indice + '"]');
+    if (itemActivo) {
+        itemActivo.classList.add("activa");
+    }
+}
+
+function actualizarIconoPlay() {
+    botonPlayPause.textContent = audio.paused ? "▶" : "⏸";
+}
+
+botonPlayPause.addEventListener("click", function() {
+
+    if (audio.src === "") {
+        cargarCancion(cancionActual);
+    }
+
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+
+    actualizarIconoPlay();
+
+});
+
+botonSiguienteCancion.addEventListener("click", function() {
+
+    cancionActual++;
+
+    if (cancionActual >= canciones.length) {
+        cancionActual = 0;
+    }
+
+    cargarCancion(cancionActual);
+    audio.play();
+    actualizarIconoPlay();
+
+});
+
+botonAnteriorCancion.addEventListener("click", function() {
+
+    cancionActual--;
+
+    if (cancionActual < 0) {
+        cancionActual = canciones.length - 1;
+    }
+
+    cargarCancion(cancionActual);
+    audio.play();
+    actualizarIconoPlay();
+
+});
+
+controlVolumen.addEventListener("input", function(e) {
+    audio.volume = e.target.value;
+});
+
+function actualizarProgreso() {
+
+    if (audio.duration > 0) {
+        barraProgreso.value = (audio.currentTime / audio.duration) * 100;
+        tiempoTexto.textContent = formatoTiempo(audio.currentTime) + " / " + formatoTiempo(audio.duration);
+    }
+
+    if (audio.ended) {
+        botonSiguienteCancion.click();
+    }
+
+}
+
+barraProgreso.addEventListener("click", function(e) {
+    const nuevaPosicion = (e.offsetX / barraProgreso.offsetWidth) * audio.duration;
+    audio.currentTime = nuevaPosicion;
+});
+
+function formatoTiempo(segundos) {
+    const minutos = Math.floor(segundos / 60);
+    const segundosRestantes = Math.floor(segundos % 60);
+    return minutos + ":" + (segundosRestantes < 10 ? "0" : "") + segundosRestantes;
+}
+
+audio.volume = controlVolumen.value;
+crearListaCanciones();
