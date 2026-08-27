@@ -30,7 +30,7 @@
         En el juego, una horda de zombis intenta llegar a la casa del jugador,y la manera de detenerlos es utilizando plantas. Cada tipo de planta y de zombi tiene habilidades diferentes, por lo que el jugador deberá adaptar su estrategia en cada nivel.
       </p>
 
-      <button id="boton-info"> Mostrar más</button>
+      <button id="boton-info" class="boton"> Mostrar más</button>
 
       <div id="extra-info">
 
@@ -177,9 +177,7 @@
 
         <br>
 
-        <input type="text" placeholder="Correo electrónico" required>
-				
-        <button type="submit">Enviar</button>
+        <input type="email" placeholder="Correo electrónico">
 
 				<br>
 
@@ -190,15 +188,13 @@
         
         <br>
 				
-        <input type="text" placeholder="Número telefónico" required>
-				
-        <button type="submit">Enviar</button>
-				
+        <input type="tel" placeholder="Número telefónico" pattern="[0-9]{8}" title="Ingrese un número de teléfono de 8 dígitos">
+
 				<br>
 					
 				<!-- Checkbox -->
 				<label for="cond">
-					<input id="cond" type="checkbox" value="cond" checked> Aceptar <a href="#">Condiciones de Uso</a>
+					<input id="cond" type="checkbox" value="cond" required> Aceptar <a href="#">Condiciones de Uso</a>
 				</label>
         
         <br>
@@ -206,6 +202,10 @@
         <label for="sus">
 					<input id="sus" type="checkbox" value="sus" checked> Suscribir
 				</label>
+
+        <br>
+
+        <button type="submit" class="boton">Enviar</button>
 
 			</form>
 
