@@ -1,5 +1,8 @@
 console.log("JavaScript funcionando");
 
+/**
+ * Boton informacion adicional
+ */
 const botonInfo = document.getElementById("boton-info");
 const infoAdicional = document.getElementById("extra-info");
 
@@ -15,6 +18,9 @@ botonInfo.addEventListener("click", function() {
 
 });
 
+/**
+ *  Modal hacia pagina oficial
+ */
 const botonModal = document.getElementById("boton-modal");
 const modal = document.getElementById("modal");
 const cerrarModal = document.getElementById("cerrar-modal");
@@ -32,6 +38,9 @@ cerrarModalAbajo.addEventListener("click", function() {
     modal.style.display = "none";
 });
 
+/**
+ * Galeria de imagenes de las pantallas del juego
+ */
 const imagenMapa = document.getElementById("imagen-mapa");
 const nombreMapa = document.getElementById("nombre-mapa");
 const botonAnterior = document.getElementById("anterior");
@@ -94,6 +103,9 @@ function mostrarMapa() {
 
 }
 
+/**
+ *  Acordeon para las plantas y zombis
+ */
 const acordeones = document.querySelectorAll(".acordeon");
 
 acordeones.forEach(function(acordeon) {
@@ -112,13 +124,16 @@ acordeones.forEach(function(acordeon) {
 
 });
 
-
+/**
+ *  Reproductor de audio
+ *  Referencia en el README
+ */
 const canciones = [
     { archivo: "Laura Shigihara - Crazy Dave's Greeting.mp3", nombre: "Crazy Dave's Greeting" },
     { archivo: "Laura Shigihara - Crazy Dave (Intro Theme).mp3", nombre: "Crazy Dave (Intro Theme)" },
     { archivo: "Laura Shigihara - Choose Your Seeds.mp3", nombre: "Choose Your Seeds" },
     { archivo: "Laura Shigihara - Zen Garden.mp3", nombre: "Zen Garden" },
-    { archivo: "Laura Shigihara - Grasswalk.mp3", nombre: "Grasswalk" },,
+    { archivo: "Laura Shigihara - Grasswalk.mp3", nombre: "Grasswalk" },
     { archivo: "Laura Shigihara - Loonboon.mp3", nombre: "Loonboon" },
     { archivo: "Laura Shigihara - Moongrains.mp3", nombre: "Moongrains" },
     { archivo: "Laura Shigihara - Graze the Roof.mp3", nombre: "Graze the Roof" },
@@ -133,6 +148,7 @@ const canciones = [
     { archivo: "Laura Shigihara - Zombies on Your Lawn.mp3", nombre: "Zombies on Your Lawn" }
 ];
 
+// Elementos del html
 const audio = document.getElementById("reproductor-audio");
 const botonPlayPause = document.getElementById("play-pause");
 const botonAnteriorCancion = document.getElementById("anterior-cancion");
@@ -143,8 +159,10 @@ const cancionActualTexto = document.getElementById("cancion-actual");
 const controlVolumen = document.getElementById("volumen");
 const listaCancionesEl = document.getElementById("lista-canciones");
 
+// Indice de la cancion actual
 let cancionActual = 0;
 
+// Lista de canciones
 function crearListaCanciones() {
     canciones.forEach(function(cancion, indice) {
         const item = document.createElement("li");
@@ -162,6 +180,7 @@ function crearListaCanciones() {
     });
 }
 
+// Cargar la cancion
 function cargarCancion(indice) {
 
     audio.src = "soundtrack/" + encodeURIComponent(canciones[indice].archivo);
@@ -177,6 +196,7 @@ function cargarCancion(indice) {
     }
 }
 
+// Cambiar el signo de play y pause
 function actualizarIconoPlay() {
     botonPlayPause.textContent = audio.paused ? "▶" : "⏸";
 }
@@ -197,6 +217,7 @@ botonPlayPause.addEventListener("click", function() {
 
 });
 
+// Boton para pasar de canción
 botonSiguienteCancion.addEventListener("click", function() {
 
     cancionActual++;
@@ -211,6 +232,7 @@ botonSiguienteCancion.addEventListener("click", function() {
 
 });
 
+// Boton para retroceder cancion
 botonAnteriorCancion.addEventListener("click", function() {
 
     cancionActual--;
@@ -225,6 +247,7 @@ botonAnteriorCancion.addEventListener("click", function() {
 
 });
 
+// Contralador de volumen
 controlVolumen.addEventListener("input", function(e) {
     audio.volume = e.target.value;
 });
@@ -242,6 +265,7 @@ function actualizarProgreso() {
 
 }
 
+// Liena de reproducción de audio
 barraProgreso.addEventListener("click", function(e) {
     const nuevaPosicion = (e.offsetX / barraProgreso.offsetWidth) * audio.duration;
     audio.currentTime = nuevaPosicion;
